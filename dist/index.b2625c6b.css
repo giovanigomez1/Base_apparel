@@ -42,6 +42,15 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 50em) {
+  .container__logo {
+    grid-area: 1 / 1 / auto / 3;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4rem;
+  }
+}
+
 .container__base {
   flex-direction: column;
   justify-content: flex-start;
@@ -50,11 +59,30 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 50em) {
+  .container__base {
+    align-items: center;
+    padding: 10rem 0 5rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container__base {
+    padding: 6rem 0 5rem;
+  }
+}
+
 .container__base--content {
   flex-direction: column;
-  gap: 4rem;
-  width: 70%;
+  gap: 3rem;
+  width: 74%;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container__base--content {
+    width: 82%;
+  }
 }
 
 .container__base--content-email {
@@ -89,6 +117,12 @@ body {
   padding-left: 3rem;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container__base--content-email .email__box input {
+    width: 60%;
+  }
+}
+
 .container__base--content-email .email__box input::placeholder {
   color: #ce979772;
 }
@@ -118,10 +152,22 @@ body {
 .container__base--content h1 {
   text-transform: uppercase;
   color: var(--desaturated-red);
-  letter-spacing: 10px;
+  letter-spacing: 12px;
   margin: 0;
   font-size: 6rem;
   font-weight: 300;
+}
+
+@media only screen and (width <= 50em) {
+  .container__base--content h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container__base--content h1 {
+    font-size: 6rem;
+  }
 }
 
 .container__base--content span {
@@ -133,12 +179,27 @@ body {
 
 .container__base--content_message {
   color: var(--desaturated-red);
+  text-align: initial;
   font-size: 1.6rem;
   line-height: 1.6;
 }
 
 .container__image {
   grid-area: 1 / 2 / 3;
+}
+
+@media only screen and (width <= 50em) {
+  .container__image {
+    grid-area: 2 / 1 / auto / 3;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container__image {
+    height: 36rem;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .container__image img {
@@ -150,6 +211,20 @@ body {
 @media only screen and (width <= 62.5em) {
   .container__image img {
     height: 80vh;
+  }
+}
+
+@media only screen and (width <= 50em) {
+  .container__image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container__image img {
+    position: absolute;
+    top: -4rem;
   }
 }
 
